@@ -1,0 +1,5 @@
+.env
+new.db
+news.db-shm
+news.db-wal
+/node_modules

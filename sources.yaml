@@ -1,0 +1,84 @@
+
+feeds:
+  - name: РИА Новости
+    url: https://ria.ru/export/rss2/archive/index.xml
+    weight: 1.0
+  - name: ТАСС
+    url: https://tass.ru/rss/google.xml
+    weight: 1.0
+  - name: РБК
+    url: https://rssexport.rbc.ru/rbcnews/news/30/full.rss
+    weight: 1.0
+  - name: Ведомости
+    url: https://www.vedomosti.ru/rss/news
+    weight: 1.0
+  - name: Коммерсантъ — Лента новостей
+    url: https://www.kommersant.ru/RSS/news.xml
+    weight: 1.0
+  - name: Известия
+    url: https://iz.ru/feed
+    weight: 1.0
+  - name: Российская газета
+    url: https://rg.ru/xml/index.xml
+    weight: 1.0
+  - name: Лента.ру
+    url: https://lenta.ru/rss/news
+    weight: 1.0
+  - name: Газета.Ru — Первая полоса
+    url: https://www.gazeta.ru/export/rss/first.xml
+    weight: 1.0
+  - name: Вести.ru
+    url: https://www.vesti.ru/vesti.rss
+    weight: 1.0
+  - name: Meduza (RU)
+    url: https://meduza.io/rss/all
+    weight: 1.0
+  - name: DW (русский)
+    url: https://rss.dw.com/rdf/rss-ru-all
+    weight: 1.0
+  - name: Фонтанка
+    url: http://www.fontanka.ru/fontanka.rss
+    weight: 1.0
+  - name: EADaily
+    url: https://eadaily.com/ru/rss/index.xml
+    weight: 1.0
+  - name: Хабр (новости)
+    url: https://habr.com/ru/rss/news/?fl=ru
+    weight: 1.0
+  
+  - name: Shazoo (Игры/Кино/Тех)
+    url: https://shazoo.ru/feed/RSS
+    weight: 1.0
+
+  - name: GameMAG (Игры)
+    url: http://gamemag.ru/rss.php
+    weight: 1.0
+
+  - name: GoHa.ru (MMO/Игры)
+    url: https://www.goha.ru/rss
+    weight: 1.0
+
+  - name: Канобу (общая лента)
+    url: https://kanobu.ru/rss/yandex_new.xml
+    weight: 1.0
+
+  - name: iXBT Live / Игры (блог)
+    url: https://www.ixbt.com/live/rss/blog/games/
+    weight: 1.0
+
+  # --- Юмор / развлекательные ---
+  - name: Пикабу (горячее)
+    url: https://pikabu.ru/xmlfeeds.php?cmd=popular
+    weight: 1.0
+
+  - name: ЯПлакалъ (новости/лента)
+    url: https://www.yaplakal.com/news.xml
+    weight: 1.0
+
+  - name: Fishki.net (общее)
+    url: http://fishki.net/rss.xml
+    weight: 1.0
+
+  - name: Anekdot.ru (топ-10)
+    url: https://www.anekdot.ru/rss/export_j.xml
+    weight: 1.0

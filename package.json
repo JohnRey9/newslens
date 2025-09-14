@@ -1,0 +1,30 @@
+
+{
+  "name": "newslens-service",
+  "version": "0.3.2",
+  "description": "RU news recommender with logging, dominant LLM weights, fast enrichment, and daily LLM-only posts.",
+  "type": "module",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "NODE_ENV=development node src/bot.js",
+    "ingest": "node -e \"import('dotenv/config');import('./src/pipeline.js').then(m=>m.runIngestOnce())\"",
+    "eval": "node -e \"import('dotenv/config');import('./src/pipeline.js').then(m=>m.runEvaluateOnce())\"",
+    "materialize": "node -e \"import('dotenv/config');import('./src/pipeline.js').then(m=>m.runMaterializeOnce())\"",
+    "llm": "node -e \"import('dotenv/config');import('./src/pipeline.js').then(m=>m.runLLMOnce(Number(process.env.LLM_BATCH_LIMIT||150)))\"",
+    "migrate": "node -e \"import('./src/db.js').then(m=>m.migrate()).then(()=>console.log('migrated'))\"",
+    "reset:news": "node -e \"import('./src/db.js').then(async m=>{const d=await m.db(); await d.exec('DELETE FROM deliveries; DELETE FROM posts; DELETE FROM articles; DELETE FROM clusters; DELETE FROM llm_features; DELETE FROM feedback; VACUUM;'); console.log('news wiped'); process.exit(0);})\"",
+    "reset:all": "node -e \"import('fs').then(fs=>fs.promises.rm('news.db',{force:true}).then(()=>console.log('news.db removed')))\""
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.0",
+    "node-cron": "^3.0.3",
+    "openai": "^4.59.0",
+    "rss-parser": "^3.13.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "telegraf": "^4.16.3"
+  }
+}
